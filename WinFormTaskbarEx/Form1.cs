@@ -26,13 +26,14 @@ namespace WinFormTaskbarEx
             trackBar1.Maximum = maxValue;
             buttonQuit.Enabled = false;
             buttonRestart.Enabled = false;
+            buttonStart.Enabled = true;
 
-            InitializeTimer(PacingTimer);
+            // Wait for START button to be pressed to begin processing
+
             //PacingTimer.Interval = 1000 * 1; // time in msec 1 sec in this case
             //PacingTimer.Tick += new EventHandler(PacingTimer_Tick);
             //PacingTimer.Tag = "FunTimer";
             //PacingTimer.Start();
-            Run(PacingTimer);
             //StopTimer(PacingTimer);
         }
 
@@ -51,10 +52,11 @@ namespace WinFormTaskbarEx
             {
                 // StopTimer(PacingTimer);
                 PacingTimer.Stop();
-                timerLabel.Text = @"Max Count Reached, Timer " + PacingTimer.Tag + @" now disabled";
+                timerLabel.Text = @"Max Count of " + maxValue.ToString() + @" Reached by Timer " + PacingTimer.Tag + @", now disabled";
                 this.Refresh();
                 buttonQuit.Enabled = true;
                 buttonRestart.Enabled = true;
+                buttonStart.Enabled = false;
            
             }
 
@@ -104,6 +106,12 @@ namespace WinFormTaskbarEx
             //    ResetForm();
             //}
 
+        }
+
+        private void buttonStart_Click(object sender, EventArgs e)
+        {
+            InitializeTimer(PacingTimer);
+            Run(PacingTimer);
         }
     }
 }

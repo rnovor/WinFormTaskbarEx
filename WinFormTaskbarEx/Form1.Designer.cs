@@ -33,13 +33,14 @@
             this.timerLabel2 = new System.Windows.Forms.Label();
             this.buttonRestart = new System.Windows.Forms.Button();
             this.buttonQuit = new System.Windows.Forms.Button();
+            this.buttonStart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // trackBar1
             // 
             this.trackBar1.Location = new System.Drawing.Point(267, 272);
-            this.trackBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(4);
             this.trackBar1.Maximum = 100;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(362, 45);
@@ -70,7 +71,7 @@
             // buttonRestart
             // 
             this.buttonRestart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRestart.Location = new System.Drawing.Point(267, 395);
+            this.buttonRestart.Location = new System.Drawing.Point(386, 395);
             this.buttonRestart.Name = "buttonRestart";
             this.buttonRestart.Size = new System.Drawing.Size(100, 40);
             this.buttonRestart.TabIndex = 3;
@@ -90,18 +91,30 @@
             this.buttonQuit.UseVisualStyleBackColor = true;
             this.buttonQuit.Click += new System.EventHandler(this.buttonQuit_Click);
             // 
+            // buttonStart
+            // 
+            this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStart.Location = new System.Drawing.Point(237, 395);
+            this.buttonStart.Name = "buttonStart";
+            this.buttonStart.Size = new System.Drawing.Size(100, 40);
+            this.buttonStart.TabIndex = 5;
+            this.buttonStart.Text = "Start";
+            this.buttonStart.UseVisualStyleBackColor = true;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(902, 504);
+            this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.buttonQuit);
             this.Controls.Add(this.buttonRestart);
             this.Controls.Add(this.timerLabel2);
             this.Controls.Add(this.timerLabel);
             this.Controls.Add(this.trackBar1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -118,6 +131,7 @@
         private System.Windows.Forms.Label timerLabel2;
         private System.Windows.Forms.Button buttonRestart;
         private System.Windows.Forms.Button buttonQuit;
+        private System.Windows.Forms.Button buttonStart;
     }
 }
 
