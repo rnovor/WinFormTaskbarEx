@@ -54,9 +54,9 @@
             this.timerLabel.Location = new System.Drawing.Point(208, 138);
             this.timerLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.timerLabel.Name = "timerLabel";
-            this.timerLabel.Size = new System.Drawing.Size(105, 16);
+            this.timerLabel.Size = new System.Drawing.Size(117, 16);
             this.timerLabel.TabIndex = 1;
-            this.timerLabel.Text = "Timer Counter";
+            this.timerLabel.Text = "Timer Counter 0";
             // 
             // timerLabel2
             // 

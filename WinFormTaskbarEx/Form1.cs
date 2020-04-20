@@ -28,7 +28,7 @@ namespace WinFormTaskbarEx
             buttonRestart.Enabled = false;
             buttonStart.Enabled = true;
 
-            // Wait for START button to be pressed to begin processing
+            // Wait for START button event to be set to begin processing
 
             //PacingTimer.Interval = 1000 * 1; // time in msec 1 sec in this case
             //PacingTimer.Tick += new EventHandler(PacingTimer_Tick);
@@ -54,6 +54,7 @@ namespace WinFormTaskbarEx
                 PacingTimer.Stop();
                 timerLabel.Text = @"Max Count of " + maxValue.ToString() + @" Reached by Timer " + PacingTimer.Tag + @", now disabled";
                 this.Refresh();
+                //Reset button access
                 buttonQuit.Enabled = true;
                 buttonRestart.Enabled = true;
                 buttonStart.Enabled = false;
