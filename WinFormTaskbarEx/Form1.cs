@@ -25,7 +25,7 @@ namespace WinFormTaskbarEx
         {
             trackBar1.Maximum = maxValue;
             buttonQuit.Enabled = false;
-            buttonRestart.Enabled = false;
+            buttonReset.Enabled = false;
             buttonStart.Enabled = true;
 
             // Wait for START button event to be set to begin processing
@@ -56,7 +56,7 @@ namespace WinFormTaskbarEx
                 this.Refresh();
                 //Reset button access
                 buttonQuit.Enabled = true;
-                buttonRestart.Enabled = true;
+                buttonReset.Enabled = true;
                 buttonStart.Enabled = false;
            
             }
@@ -89,7 +89,7 @@ namespace WinFormTaskbarEx
             Application.Restart();
         }
 
-        private void buttonRestart_Click(object sender, EventArgs e)
+        private void buttonReset_Click(object sender, EventArgs e)
         {
             ResetForm();
         }
@@ -113,6 +113,11 @@ namespace WinFormTaskbarEx
         {
             InitializeTimer(PacingTimer);
             Run(PacingTimer);
+        }
+
+        private void menuStripQuit_Click(object sender, EventArgs e)
+        {
+            Application.ExitThread();
         }
     }
 }
